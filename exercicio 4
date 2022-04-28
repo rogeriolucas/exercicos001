@@ -1,0 +1,27 @@
+<?php
+
+public class somaMultiplos {
+
+    public static void main(String[] args) {
+        int numeroTres = 3;
+        int numeroCinco = 5;
+        int somaMultiploTres = 0;
+        int somaMultiploCinco = 0;
+        int resultado = 0;
+
+        for(int i = 0; i < 1000; i++) {
+            if((i%numeroTres == 0)||(i%numeroCinco == 0))
+                resultado += i;     
+
+            if((i%numeroTres == 0)&&(i%numeroCinco == 0))
+                resultado += i;
+        }
+        // vai haver momentos de existir número múltiplos de 3 e de 5 ao mesmo tempo 
+        // e portanto o primeiro "if" não leva isso consideração 
+        //o segundo "if" é justamente para somar os números que são múltiplos de 3 e 5 ao mesmo tempo
+
+
+        print_r("A soma dos multiplos de 3 e 5 abaixo de 1000, é: " +resultado);
+    }
+    
+    >
